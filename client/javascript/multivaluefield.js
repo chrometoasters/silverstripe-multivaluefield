@@ -34,9 +34,9 @@ jQuery(function($) {
 			// the correct container.
 			append.find("input, select, textarea").val("").attr("id", function() {
 				var pos = this.id.lastIndexOf("__");
-				var num = parseInt(this.id.substr(pos + 1));
+				var num = parseInt(this.id.substr(pos + 2));
 
-				return this.id.substr(0, pos + 1) + (num + 1).toString();
+				return this.id.substr(0, pos + 2) + (num + 1).toString();
 			});
 
 			append.appendTo(self.parents("ul.multivaluefieldlist"));
